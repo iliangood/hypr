@@ -88,7 +88,7 @@ hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd(noctCall .. "brightness-down"),
 -------------------
 
 -- Screen Capture
-hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("hyprpicker -a -n"))
+-- hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("hyprpicker -a -n"))
 hl.bind("Print", hl.dsp.exec_cmd(noctCall .. "screenshot-region"))
 hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd(noctCall .. "screenshot-fullscreen"))
 
@@ -101,8 +101,10 @@ hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(noctCall .. "panel-toggle clipboard")
 -- Notifications
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(noctCall .. "panel-toggle control-center notifications"))
 
+hl.bind(mainMod .. " + P", hl.dsp.window.pin())
+
 -- layouts
-hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(noctCall .. "keyboard-layout-cycle"), { locked = true })
+-- hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(noctCall .. "keyboard-layout-cycle"), { locked = true })
 -- hl.bind("ALT + SHIFT", hl.dsp.exec_cmd(noctCall .. "keyboard-layout-cycle"))
 -- hl.bind("SHIFT + ALT", hl.dsp.exec_cmd(noctCall .. "keyboard-layout-cycle"))
 
@@ -140,4 +142,5 @@ hl.bind(mainMod .. " + CONTROL + mouse_down", hl.dsp.focus({ workspace = "m+1" }
 
 -- Special workspace (scratchpad)
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special" }))
+hl.bind(mainMod .. " + ALT + S", hl.dsp.window.move({ workspace = "m+0" }))
 hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special())
