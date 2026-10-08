@@ -68,6 +68,10 @@ hl.bind(mainMod .. " + ALT + C", hl.dsp.exec_cmd(noctCall .. "panel-toggle sessi
 ---- HARDWARE CONTROLS ----
 ---------------------------
 
+--Power
+hl.bind("CONTROL + ALT + S", hl.dsp.exec_cmd("systemctl suspend"))
+hl.bind("ALT + CONTROL + S", hl.dsp.exec_cmd("systemctl suspend"))
+
 -- Audio
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(noctCall .. "volume-up"), { locked = true, repeating = true })
 hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd(noctCall .. "volume-down"), { locked = true, repeating = true })

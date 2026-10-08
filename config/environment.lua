@@ -11,6 +11,11 @@ hl.env("__GL_GSYNC_ALLOWED", "1") -- Controls if G-Sync capable monitors should 
 
 -- Темная тема
 hl.env("QT_QPA_PLATFORM", "wayland;xcb")
+hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
+hl.env("QT_WAYLAND_DISABLE_WINDOWDECORATION", "1")
+hl.env("QT_AUTO_SCREEN_SCALE_FACTOR", "0")
+hl.env("QT_ENABLE_HIGHDPI_SCALING", "0")
+hl.env("QT_SCREEN_SCALE_FACTORS", "1")
 hl.env("QT_QPA_PLATFORMTHEME", "qt5ct") -- или "kvantum"
 os.execute("gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'")
 os.execute("gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'")
